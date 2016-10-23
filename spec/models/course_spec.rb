@@ -13,7 +13,7 @@ RSpec.describe Course, type: :model do
     it { should validate_length_of(:subtitle).is_at_most(255) }
   end
 
-  describe "associations" do
+  describe 'associations' do
     it { should have_many :chapters }
   end
 end
