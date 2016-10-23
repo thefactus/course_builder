@@ -1,0 +1,67 @@
+/*
+ * Card component
+  */
+
+.card {
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.16), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  /* padding: 16px; */
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #FFF;
+  > a {
+    text-decoration: none;
+    color: rgb(115, 115, 115);
+  }
+  &:hover {
+    opacity: 0.75;
+  }
+  > a > {
+    .card-header {}
+    .card-content {
+      padding: 16px;
+      > {
+        .card-title {
+          display: block;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          font-size: 22px;
+        }
+        .card-author {
+          color: #777;
+          font-size: 12px;
+          margin-top: -8px;
+        }
+      }
+    }
+    .card-action {
+      min-height: 30px;
+      > .tools {
+        padding: 0 0 0 13px;
+        float: left;
+        li {
+          display: inline;
+          color: #777;
+          a {
+            text-decoration: none;
+            color: #777;
+            padding-left: 5px;
+            padding-right: 5px;
+          }
+          span {
+            padding-left: 5px;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+    .card-content > .card-action > .tools li > span > .tools-item-counter {
+      /* styling of the counter */
+    }
+  }
+}
+
+/*
+ * Pattern social media tool component
+  */
