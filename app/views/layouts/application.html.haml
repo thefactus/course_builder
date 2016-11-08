@@ -28,12 +28,7 @@
                     %a{:href => "#"} 1
                   %li
                     %a{:href => "#"} 2
-            %li
-              %a{:href => "#"} Sign In
-            %li
-              = link_to 'Edit account', edit_user_registration_path
-            %li
-              = link_to 'Logout', destroy_user_session_path, method: :delete
+            = render 'shared/navbar_session'
     %section
       .container
         - if notice.present?
