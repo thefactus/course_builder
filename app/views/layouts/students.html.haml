@@ -1,0 +1,66 @@
+!!!
+%html
+  %head
+    %title CourseBuilder
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %nav.navbar.navbar-fixed-top
+      .container
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        = link_to 'My Blog', root_url, class: 'navbar-brand'
+        .navbar-collapse.collapse
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              = link_to 'Sign in', new_user_session_path
+            %li
+              %a{:href => "#"} About
+            %li.dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                Learn
+                %b.caret
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "#"} 1
+                  %li
+                    %a{:href => "#"} 2
+    %section#about.presentation
+      .container
+        .row
+          .col-lg-12.text-center
+            %h2 About
+        %br/
+        .row
+          .col-lg-8.col-lg-offset-2.text-center
+            %p.text-justify
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel pretium massa. Proin eget ultricies sem. Curabitur ut ullamcorper enim. Vestibulum in pulvinar sem. Donec tincidunt vel enim ac cursus. Nulla dapibus orci et sem maximus aliquet. Donec vitae accumsan neque. Nulla dignissim et odio quis sagittis. Fusce id posuere nibh. Donec a convallis est. Aenean tincidunt feugiat tempor. Nulla eros mauris, iaculis in nunc ac, rutrum faucibus mauris. Donec et lacinia odio. Ut elementum tellus sit amet turpis facilisis, sit amet placerat turpis sagittis. Aliquam quis est augue. Aliquam pulvinar, urna quis placerat aliquet, lorem mi pellentesque erat, sit amet aliquet sem ipsum eget elit.
+    %section
+      .container
+        .row
+          .col-lg-12.text-center
+            %h2 Courses
+          .col-md-4
+            .card
+              %a{:href => "#"}
+                .card-header
+                  %img.img-responsive{:src => "http://placehold.it/250x200"}/
+                .card-content
+                  %p.card-title Course Title
+                  %p.card-author by John Doe
+                .card-action
+                  %ul.tools
+                    %li
+                      %span.glyphicon.glyphicon-heart
+                      %span.tools-item-counter 14
+                    %li
+                      %span.glyphicon.glyphicon-comment
+                      %span.tools-item-counter 5
+                    %li
+                      %span.glyphicon.glyphicon-eye-open
+                      %span.tools-item-counter 2300

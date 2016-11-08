@@ -7,7 +7,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %nav.navbar.navbar-fixed-top
+    %nav.navbar.navbar-inverse.navbar-fixed-top
       .container
         %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
           %span.sr-only Toggle navigation
@@ -30,18 +30,28 @@
                     %a{:href => "#"} 2
             %li
               %a{:href => "#"} Sign In
-            %li
-              = link_to 'Edit account', edit_user_registration_path
-            %li
-              = link_to 'Logout', destroy_user_session_path, method: :delete
     %section
       .container
-        - if notice.present?
-          .alert.alert-info
-            = notice
-        - if alert.present?
-          .alert.alert-danger
-            = alert
         .row
-          .col-lg-12
-            = yield
+          .col-lg-12.text-center
+            %h2 Dashboard
+          .col-md-12
+            .col-md-4
+              .card
+                %a{:href => "#"}
+                  .card-header
+                    %img.img-responsive{:src => "http://placehold.it/250x200"}/
+                  .card-content
+                    %p.card-title Course Title
+                    %p.card-author by John Doe
+                  .card-action
+                    %ul.tools
+                      %li
+                        %span.glyphicon.glyphicon-heart
+                        %span.tools-item-counter 14
+                      %li
+                        %span.glyphicon.glyphicon-comment
+                        %span.tools-item-counter 5
+                      %li
+                        %span.glyphicon.glyphicon-eye-open
+                        %span.tools-item-counter 2300

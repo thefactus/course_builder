@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %title CourseBuilder
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %nav.navbar.navbar-fixed-top
+      .container
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{:href => "#"} Course Builder
+
+    %section
+      .container
+        .row
+          - if notice.present?
+            .alert.alert-info
+              = notice
+          - if alert.present?
+            .alert.alert-danger
+              = alert
+          = yield
